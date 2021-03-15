@@ -8,14 +8,14 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buttonNature"
+        android:id="@+id/buttonStudent"
         android:layout_marginTop="200dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="étudiants"/>
     <Button
-        android:id="@+id/buttonEspace"
+        android:id="@+id/buttonCategories"
         android:layout_marginTop="80dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
