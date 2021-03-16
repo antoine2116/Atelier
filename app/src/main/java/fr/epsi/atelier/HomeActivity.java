@@ -6,7 +6,7 @@ import android.view.View;
 
 public class HomeActivity extends AtelierActivity implements View.OnClickListener{
 
-    public static void displayActivity(MainActivity activity){
+    public static void displayActivity(AtelierActivity activity){
         Intent intent = new Intent(activity, HomeActivity.class);
         activity.startActivity(intent);
     }
@@ -16,6 +16,7 @@ public class HomeActivity extends AtelierActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         findViewById(R.id.buttonEtudiant).setOnClickListener(this);
+        findViewById(R.id.buttonCategorie).setOnClickListener(this);
     }
 
     @Override
@@ -24,10 +25,9 @@ public class HomeActivity extends AtelierActivity implements View.OnClickListene
             case R.id.buttonEtudiant:
                 StudentActivity.displayActivity(this);
                 break;
-           // case R.id.buttonEtudiant2:
-               // Studentinfo.displayActivity(this,"Marien","Etudiant");
-               // break;
-
+            case R.id.buttonCategorie:
+                CategoryActivity.displayActivity(this);
+                break;
         }
     }
 }

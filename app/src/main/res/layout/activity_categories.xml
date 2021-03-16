@@ -5,10 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AtelierActivity">
+    tools:context=".CategoryActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewStudents"
+        android:id="@+id/recyclerViewCategorys"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>

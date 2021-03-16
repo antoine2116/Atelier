@@ -7,9 +7,14 @@ import android.view.View;
 public class StudentActivity extends AtelierActivity implements View.OnClickListener {
 
     public static void displayActivity(AtelierActivity activity){
-        Intent intent = new Intent(activity,StudentActivity.class);
+        Intent intent=new Intent(activity,StudentActivity.class);
         activity.startActivity(intent);
     }
+/*
+    public static void displayActivity(AtelierActivity activity){
+        Intent intent = new Intent(activity,StudentActivity.class);
+        activity.startActivity(intent);
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

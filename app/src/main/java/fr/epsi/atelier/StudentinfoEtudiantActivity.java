@@ -1,9 +1,7 @@
 package fr.epsi.atelier;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,7 +9,7 @@ public class StudentinfoEtudiantActivity extends AtelierActivity {
 
     private TextView mTextView;
 
-    public static void displayActivity(AtelierActivity activity,String nom,String prenom,String infoEtudiant, String email, String groupe){
+    public static void displayActivity(AtelierActivity activity, String nom, String prenom, String infoEtudiant, String email, String groupe){
         Intent intent = new Intent(activity, StudentinfoEtudiantActivity.class);
         intent.putExtra("Nom",nom);
         intent.putExtra("Prenom",prenom);

@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
-public class SplashActivity extends MainActivity {
+public class SplashActivity extends AtelierActivity {
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
