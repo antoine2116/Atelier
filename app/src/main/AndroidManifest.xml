@@ -24,7 +24,7 @@
 
         <uses-library
             android:name="com.google.android.wearable"
-            android:required="true" />
+            android:required="false" />
 
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
@@ -35,7 +35,13 @@
             android:value="true" />
 
         <activity
-            android:name=".Studentinfo"
+            android:name=".StudentActivity"
+            android:label="StudentActivity">
+
+        </activity>
+
+        <activity
+            android:name=".StudentinfoEtudiantActivity"
             android:label="@string/title_activity_studentinfo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

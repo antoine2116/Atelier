@@ -4,42 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
     android:orientation="vertical"
-    android:padding="@dimen/box_inset_layout_padding"
-    tools:context=".Studentinfo"
-    tools:deviceIds="wear">
-
+    >
     <ImageView
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center"
+        android:id="@+id/image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/avatar"
-
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
         />
         <TextView
-            android:id="@+id/textInfoEtudiant"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/InfoEtudiant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="InfoEtudiant" />
-    <TextView
-        android:id="@+id/textNomPrenom"
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nom et Prénom" />
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:id="@+id/Nom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nom" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/Prenom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="prenom" />
+    </LinearLayout>
+
     <TextView
-        android:id="@+id/textEmail"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:id="@+id/Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email" />
     <TextView
-        android:id="@+id/textGroupe"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:id="@+id/Groupe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Groupe" />
     <TextView
-        android:id="@+id/textLien"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:id="@+id/Lien"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autoLink="web"
         android:text="http://www.epsi.fr" />
 
 
