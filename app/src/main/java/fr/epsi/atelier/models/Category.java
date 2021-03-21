@@ -1,4 +1,4 @@
-package fr.epsi.atelier;
+package fr.epsi.atelier.models;
 
 import org.json.JSONObject;
 
@@ -10,7 +10,7 @@ public class Category {
     public Category(JSONObject o) {
         this.id = o.optInt("category_id",0);
         this.title = o.optString("title","");
-        this.url = o.optString("product_url","");
+        this.url = o.optString("products_url","");
     }
 
     public int getId() {

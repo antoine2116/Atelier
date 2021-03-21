@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class StudentinfoEtudiantActivity extends AtelierActivity {
+public class StudentInfoEtudiantActivity extends AtelierActivity {
 
     private TextView mTextView;
 
     public static void displayActivity(AtelierActivity activity, String nom, String prenom, String infoEtudiant, String email, String groupe){
-        Intent intent = new Intent(activity, StudentinfoEtudiantActivity.class);
+        Intent intent = new Intent(activity, StudentInfoEtudiantActivity.class);
         intent.putExtra("Nom",nom);
         intent.putExtra("Prenom",prenom);
         intent.putExtra("InfoEtudiant",infoEtudiant);
@@ -23,12 +23,14 @@ public class StudentinfoEtudiantActivity extends AtelierActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_studentinfo);
-
         String nom = getIntent().getExtras().getString("Nom","");
         String prenom = getIntent().getExtras().getString("Prenom","");
         String infoEtudiant = getIntent().getExtras().getString("InfoEtudiant","");
         String email = getIntent().getExtras().getString("Email","");
         String groupe = getIntent().getExtras().getString("Groupe","");
+
+        setTitle(nom);
+        showBack();
 
         mTextView = (TextView) findViewById(R.id.InfoEtudiant);
         mTextView.setText(infoEtudiant);

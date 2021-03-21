@@ -13,6 +13,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import fr.epsi.atelier.models.Category;
+
 public class CategoryActivity extends AtelierActivity {
 
     public static void displayActivity(AtelierActivity activity){
@@ -25,9 +27,10 @@ public class CategoryActivity extends AtelierActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
-
+        setTitle("Rayons");
+        showBack();
         categorys = new ArrayList<>();
-        RecyclerView recyclerView = findViewById(R.id.recyclerViewCategorys);
+        RecyclerView recyclerView = findViewById(R.id.recyclerViewCategories);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         CategoryAdapter categoryAdapter = new CategoryAdapter(this, categorys);
         recyclerView.setAdapter(categoryAdapter);

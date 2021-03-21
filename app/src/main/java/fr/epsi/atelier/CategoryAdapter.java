@@ -1,8 +1,10 @@
 package fr.epsi.atelier;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,33 +12,29 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import fr.epsi.atelier.models.Category;
+
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
     AtelierActivity activity;
-    ArrayList<Category> categorys;
+    ArrayList<Category> categories;
 
     public CategoryAdapter(AtelierActivity activity, ArrayList<Category> categories){
         this.activity=activity;
-        this.categorys=categories;
+        this.categories =categories;
     }
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private final TextView textViewName;
-        private final View layoutCellCategorys;
+        private final Button buttonCellCategory;
 
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
-
-            textViewName = view.findViewById(R.id.textViewName);
-            layoutCellCategorys = view.findViewById(R.id.layoutCellCategories);
+            buttonCellCategory = view.findViewById(R.id.buttonCellCategory);
         }
 
-        public TextView getTextViewName() {
-            return textViewName;
-        }
-        public View getLayoutCellStudent() {
-            return layoutCellCategorys;
+        public Button getButtonCellCategory() {
+            return buttonCellCategory;
         }
     }
 
@@ -52,12 +50,18 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final Category student=categorys.get(position);
-        holder.getTextViewName().setText(student.getTitle());
+        final Category category = categories.get(position);
+        holder.getButtonCellCategory().setText(category.getTitle());
+        holder.getButtonCellCategory().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ProductsListActivity.displayActivity(activity, category.getTitle(), category.getUrl());
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return categorys.size();
+        return categories.size();
     }
 }

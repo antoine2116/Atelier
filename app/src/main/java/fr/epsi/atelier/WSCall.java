@@ -6,11 +6,13 @@ import android.os.Looper;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.UnknownHostException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -25,7 +27,7 @@ public class WSCall {
     private  Callback callback;
     private String wsUrl;
 
-    public WSCall(String wsUrl, Callback callback){
+    public WSCall(String wsUrl,Callback callback){
         this.wsUrl=wsUrl;
         this.callback=callback;
     }
@@ -37,7 +39,7 @@ public class WSCall {
                 try {
                     InputStream inputStream = null;
                     URL url = new URL(wsUrl);
-                    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                    HttpsURLConnection httpURLConnection = (HttpsURLConnection) url.openConnection();
                     httpURLConnection.setDefaultUseCaches(false);
                     httpURLConnection.connect();
                     inputStream = httpURLConnection.getInputStream();

@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature android:name="android.hardware.type.watch" />
 
@@ -46,7 +47,7 @@
         </activity>
 
         <activity
-            android:name=".StudentinfoEtudiantActivity"
+            android:name=".StudentInfoEtudiantActivity"
             android:label="@string/title_activity_studentinfo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,6 +55,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ProductsListActivity"/>
+        <activity android:name=".ProductDetailsActivity"/>
 
 
     </application>

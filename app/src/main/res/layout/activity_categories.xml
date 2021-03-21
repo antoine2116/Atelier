@@ -7,8 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".CategoryActivity">
 
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_header"/>
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewCategorys"
+        android:id="@+id/recyclerViewCategories"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>
